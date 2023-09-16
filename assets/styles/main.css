@@ -1,1 +1,325 @@
-/*# sourceMappingURL=main.css.map */
+/* BASE */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+@media screen and (max-width: 700px) {
+  body {
+    padding: 2rem 1rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    padding: 3rem 7rem;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+.navbar-nav .nav-item {
+  margin-left: 2rem;
+}
+@media screen and (max-width: 700px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .navbar-nav {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: hsl(236, 13%, 42%);
+  transition: all 0.3s;
+}
+.nav-link:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.offcanvas {
+  transform: translateX(100%);
+  background-color: hsl(36, 100%, 99%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65vw;
+  height: 100vh;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+@media screen and (max-width: 700px) {
+  .offcanvas {
+    display: block;
+  }
+}
+@media screen and (min-width: 700px) {
+  .offcanvas {
+    display: none;
+  }
+}
+
+.offcanvas-active {
+  transform: translateX(0);
+}
+
+.offcanvas-top {
+  width: 100%;
+  text-align: end;
+  padding: 2rem;
+}
+
+.offcanvas-bot {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 0rem 3rem;
+}
+.offcanvas-bot .offcanvas-item {
+  margin-top: 2rem;
+}
+.offcanvas-bot .offcanvas-item .nav-link {
+  font-size: 1.5rem;
+  color: hsl(240, 100%, 5%);
+  font-weight: 400;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #1c1d21;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 700px) {
+  .offcanvas-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 700px) {
+  .offcanvas-open {
+    display: none;
+  }
+}
+
+.overlay-active {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 6rem;
+}
+
+.main-top {
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+@media screen and (max-width: 700px) {
+  .main-top {
+    flex-direction: column;
+  }
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+section img {
+  width: 100%;
+  height: 100%;
+}
+
+.section-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .section-text {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.section-text h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  width: 50%;
+  font-weight: 800;
+}
+@media screen and (max-width: 700px) {
+  .section-text h1 {
+    width: 90%;
+    font-size: 2rem;
+  }
+}
+.section-text p {
+  color: hsl(236, 13%, 42%);
+  margin-top: 2rem;
+  width: 50%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  align-items: start;
+}
+@media screen and (max-width: 700px) {
+  .section-text p {
+    width: 90%;
+  }
+}
+.section-text p button {
+  margin-top: 3rem;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  padding: 0.7rem 1.5rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+}
+.section-text p button:hover {
+  cursor: pointer;
+  background-color: hsl(240, 100%, 5%);
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  background-color: hsl(240, 100%, 5%);
+}
+aside h1 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  margin-left: 3rem;
+  margin-top: 1.5rem;
+}
+
+.aside-item {
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 2rem;
+  position: relative;
+}
+.aside-item h2 {
+  color: hsl(36, 100%, 99%);
+  margin-bottom: 1rem;
+  transition: all 0.4s;
+}
+.aside-item h2:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.aside-item p {
+  width: 80%;
+  color: hsl(233, 8%, 79%);
+  display: block;
+  padding-bottom: 2rem;
+}
+.aside-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 1px;
+  background-color: hsl(233, 8%, 79%);
+  text-align: center;
+}
+
+.main-bot {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .main-bot {
+    flex-direction: column;
+  }
+}
+
+.bot-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.bot-item img {
+  zoom: 0.65;
+}
+.bot-item .bot-text {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  height: 100%;
+}
+.bot-item .bot-text h1 {
+  color: hsl(233, 8%, 79%);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.bot-item .bot-text h2 {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.4s;
+}
+.bot-item .bot-text h2:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.bot-item .bot-text p {
+  max-width: 80%;
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=main.css.map */

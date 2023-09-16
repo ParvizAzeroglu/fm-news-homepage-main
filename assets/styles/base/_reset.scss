@@ -1,0 +1,32 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: $default-font-size;
+  font-family: $font;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  @media screen and (max-width: 700px) {
+    padding: 2rem 1rem;
+  }
+
+  @media screen and (min-width: 700px) {
+    padding: 3rem 7rem;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}

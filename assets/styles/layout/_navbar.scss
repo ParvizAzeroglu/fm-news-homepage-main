@@ -1,0 +1,101 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-nav {
+  align-items: center;
+
+  .nav-item {
+    margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: $dark-gray;
+  transition: all 0.3s;
+  &:hover {
+    color: $soft-red;
+  }
+}
+
+.offcanvas {
+  transform: translateX(100%);
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65vw;
+  height: 100vh;
+  z-index: 1000;
+  transition: all 0.5s;
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+.offcanvas-active {
+  transform: translateX(0);
+}
+
+.offcanvas-top {
+  width: 100%;
+  text-align: end;
+  padding: 2rem;
+}
+
+.offcanvas-bot {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding: 0rem 3rem;
+  .offcanvas-item {
+    margin-top: 2rem;
+    .nav-link {
+      font-size: 1.5rem;
+      color: $dark;
+      font-weight: 400;
+    }
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: $overlay;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+}
+
+.offcanvas-open {
+  @media screen and (max-width: 700px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
+.overlay-active {
+  visibility: visible;
+  opacity: 0.4;
+}
