@@ -75,21 +75,13 @@ a {
   width: 65vw;
   height: 100vh;
   z-index: 1000;
+  display: none;
   transition: all 0.5s;
-}
-@media screen and (max-width: 700px) {
-  .offcanvas {
-    display: block;
-  }
-}
-@media screen and (min-width: 700px) {
-  .offcanvas {
-    display: none;
-  }
 }
 
 .offcanvas-active {
   transform: translateX(0);
+  display: block;
 }
 
 .offcanvas-top {
@@ -322,4 +314,4 @@ aside h1 {
 .bot-item .bot-text p {
   max-width: 80%;
   margin-top: 0.5rem;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
